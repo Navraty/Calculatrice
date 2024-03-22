@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* App.css */
+.container {
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #25f5f5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input {
+  width: 94%;
+  height: 80px;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  padding-right: 20px;
+  background-color: #53d3d3;
+}
+
+ .keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+} 
+
+ button {
+  height: 60px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+} 
+
+ button[name="0"] {
+  grid-column: span 2;
+} 
+
+ button[name="="] {
+  background-color: #1e90ff;
+  color: white;
+  grid-column: span 2;
+} 
+
+button[name="+"],
+button[name="-"],
+button[name="*"],
+button[name="/"] {
+  background-color: #ff8c00;
+  color: white;
+}
+
+button[name="C"] {
+  background-color: #ff0000;
+  color: white;
+}
+
+calc{
+background-color: black;
+border-radius: 5%;
 }
